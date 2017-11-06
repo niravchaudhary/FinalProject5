@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-  validates :tile, :content, presence: true
+  validates :title, :content, presence: true
 end

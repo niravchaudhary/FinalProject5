@@ -1,3 +1,3 @@
 class Trailer < ApplicationRecord
-  validates :name, :description, :release_date, presence: true
+  validates :trailer_name, :description, :release_date, presence: true
 end
