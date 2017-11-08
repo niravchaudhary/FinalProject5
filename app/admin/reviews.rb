@@ -1,4 +1,3 @@
 ActiveAdmin.register Review do
-permit_params :title, :content, :customer_id
-
+  permit_params :title, :content, :cust_id
 end

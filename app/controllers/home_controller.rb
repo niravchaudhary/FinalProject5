@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @movies = Movie.all
+    @trailer = Trailer.all
   end
 end
