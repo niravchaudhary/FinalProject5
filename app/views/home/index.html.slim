@@ -1,6 +1,9 @@
-h1 All the Movie contant
-- @movies.each do |movie|
-    p   Movie Name: #{movie.name}
-    p =  movie.description
-    p =  movie.star_cast
+h1 MOVIE TIME
+.image
+ |img src="/assetsmovie.jpg"  alt="Movie" 
+ - @movies.each do |movie|
+     h2   Movie Name: #{movie.name}
+     p =  movie.description
+     p =  movie.star_cast
+     img src="/assets#{movie.image}" alt="Avengers"
  

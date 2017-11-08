@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108081200) do
+ActiveRecord::Schema.define(version: 20171108202557) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -84,6 +84,15 @@ ActiveRecord::Schema.define(version: 20171108081200) do
     t.datetime "updated_at", null: false
     t.integer "movie_id"
     t.index ["movie_id"], name: "index_trailers_on_movie_id"
+  end
+
+  create_table "upcomings", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.text "description"
+    t.string "star_cast"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
