@@ -1,2 +1,6 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+h1 All the Movie contant
+- @movies.each do |movie|
+    p   Movie Name: #{movie.name}
+    p =  movie.description
+    p =  movie.star_cast
+ 
