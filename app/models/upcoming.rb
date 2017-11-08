@@ -1,2 +1,0 @@
-class Upcoming < ApplicationRecord
-end
