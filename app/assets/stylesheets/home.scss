@@ -7,10 +7,13 @@ body {
 img{
     height: 100px;
     width: 100px;
+    position: relative;
+    padding-top: 0px;
 }
 h1{
     padding-left: 600px;
 }
-#headimage{
-    padding-top: 0px;
+
+p{
+    font-size: 15px;
 }

@@ -1,10 +1,11 @@
 h1 MOVIE TIME
-img src="/assetsmovie.jpg"  alt="Movie" 
- - @trailers.each do |trailer|
+nav
+ ul
+  li = link_to 'Home', root_path
+- @trailers.each do |trailer|
      h2 = trailer.trailer_name
      p =  trailer.description
-     p =  trailer.release_date
-     p = trailer.trailer
      li
-      iframe width="400" height="400" src=trailer.trailer frameborder="100" allowfullscreen
- 
+      iframe src=trailer.trailer
+     p Release Date: #{trailer.release_date}
+== paginate @trailers
