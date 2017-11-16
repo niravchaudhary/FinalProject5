@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   get 'about_page/about'
+  #get 'aboutpage', to: 'aboutpage#about', as: 'aboutpage'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   #ActiveAdmin.routes(self)
   #devise_for :admin_users, ActiveAdmin::Devise.config
   #ActiveAdmin.routes(self)
   root to: 'home#index'
+  
+  get '/search', to: "home#search", as: 'search'
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

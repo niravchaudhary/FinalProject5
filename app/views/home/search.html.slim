@@ -1,0 +1,11 @@
+h1 Tailer result
+nav
+ ul
+  li = link_to 'Home', root_path
+  li = link_to 'About', about_page_about_path
+- @trailers.each do |trailer|
+     h2 = trailer.trailer_name
+     p =  trailer.description
+     li
+      iframe src=trailer.trailer
+     p Release Date: #{trailer.release_date}
