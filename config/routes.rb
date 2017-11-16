@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'movie/movie'
+
   get 'about_page/about'
   #get 'aboutpage', to: 'aboutpage#about', as: 'aboutpage'
 
