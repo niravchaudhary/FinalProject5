@@ -4,3 +4,7 @@ li = link_to 'About', about_page_about_path
 - @abouts.each do |about|
      p = about.info
      p #{image_tag about.image}
+h2 Contact Us
+- @contacts.each do |contact|
+     p = contact.phone
+     p = contact.email
