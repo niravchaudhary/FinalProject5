@@ -1,2 +1,11 @@
-h1 Movie#movie
-p Find me in app/views/movie/movie.html.slim
+h1 Movie
+nav
+ ul
+  li = link_to 'Home', root_path
+  li = link_to 'About', about_page_about_path
+- @movies.each do |movie|
+     h2 = movie.name
+     p =  movie.description
+     p #{image_tag movie.image}
+     p Release Date: #{movie.release_date}
+     p Price : #{movie.order_price}
