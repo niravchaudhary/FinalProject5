@@ -1,0 +1,14 @@
+<h1> Movie </h1>
+<nav>
+ <ul>
+  <li> <%= link_to 'Home', root_path %></li>
+  <li> <%= link_to 'About', about_page_about_path %></li>
+  </ul>
+</nav>
+ <% @movie2.each do |movie| %>
+     <h2><%=  movie.name %></h2>
+     <p> <%=  movie.description %> </p>
+     <p> <%= image_tag movie.image %></p>
+     <p> Release Date: <%= movie.release_date %> </p>
+     <p> Price : <%= movie.order_price %> </p>
+   <% end %>

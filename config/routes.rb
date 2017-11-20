@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   root to: 'home#index'
   
   get '/search', to: "home#search", as: 'search'
+  get '/category_display', to: "movie#category_display", as: 'category_display'
+  get '/own_product', to: "movie#own_product", as: 'own_product'
 
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

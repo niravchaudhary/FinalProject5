@@ -1,0 +1,25 @@
+<h1> Movie </h1>
+<nav>
+ <ul>
+  <li> <%= link_to 'Home', root_path %></li>
+  <li> <%= link_to 'About', about_page_about_path %></li>
+  </ul>
+</nav>
+      
+ <%= form_tag category_display_path, method: 'get' do %>
+        <%= text_field_tag :category_movie_display %>
+        <%= submit_tag "Search" %>
+      <% end %>     
+ <% @movies.each do |movie| %>
+     <h2><%= link_to movie.name,own_product_path(name: movie.name) %></h2>
+     <p> <%=  movie.description %> </p>
+     <p> <%= image_tag movie.image %></p>
+     <p> Release Date: <%= movie.release_date %> </p>
+     <p> Price : <%= movie.order_price %> </p>
+   <% end %>
+<p>Category:
+<%= select_tag(:Category, '<option value="1">Action</option><option value="2">Suspense</option>'.html_safe) %>
+</p>
+
+<p><%= link_to "Submit", category_display_path(':Select_tag') %></p>
+		
