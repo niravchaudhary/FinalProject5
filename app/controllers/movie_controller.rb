@@ -4,20 +4,20 @@ class MovieController < ApplicationController
   end
   
   def display
-    @category_name = params[:category_name]
+    @category_name = params[:category_movie_display]
     search = "%" + @category_name + "%"
     @category = Movie.where("category LIKE ?", search)
   end
-  
-  def category_display
-    @keywords = params[:category_movie_display]
-    cat = "%" + @keywords + "%"
-    @movie1 = Movie.where("category LIKE ?", cat)
-  end
-  
+    
   def own_product
     @movie_name = params[:name]
     ownpro = "%" + @movie_name + "%"
     @movie2 = Movie.where("name LIKE ?", ownpro)
+  end
+  
+  def filter
+    @movie_name1 = params[:filter]
+    filter = "%" + @movie_name1 + "%"
+    @movie3 = Movie.where("filter LIKE ?", filter)
   end
 end

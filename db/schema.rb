@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171118222733) do
+ActiveRecord::Schema.define(version: 20171120031251) do
 
   create_table "abouts", force: :cascade do |t|
     t.text "info"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 20171118222733) do
     t.string "name"
     t.string "image"
     t.string "category"
+    t.string "filter"
     t.index ["customer_id"], name: "index_movies_on_customer_id"
   end
 

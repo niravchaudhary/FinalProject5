@@ -1,4 +1,4 @@
-<h1> Category Search </h1>
+<h1> Category </h1>
 <nav>
  <ul>
   <li> <%= link_to 'Home', root_path %></li>
@@ -15,6 +15,4 @@
 <p>Category:
 <%= select_tag(:Category, '<option value="1">Action</option><option value="2">Suspense</option>'.html_safe) %>
 </p>
-
-<p><%= link_to "Submit", category_display_path(':Select_tag') %></p>
 		

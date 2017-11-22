@@ -6,7 +6,7 @@
   </ul>
 </nav>
       
- <%= form_tag category_display_path, method: 'get' do %>
+ <%= form_tag display_path, method: 'get' do %>
         <%= text_field_tag :category_movie_display %>
         <%= submit_tag "Search" %>
       <% end %>     
@@ -16,10 +16,13 @@
      <p> <%= image_tag movie.image %></p>
      <p> Release Date: <%= movie.release_date %> </p>
      <p> Price : <%= movie.order_price %> </p>
+     <h3><%= link_to movie.filter,filter_path(filter: movie.filter) %></h3>
    <% end %>
 <p>Category:
-<%= select_tag(:Category, '<option value="1">Action</option><option value="2">Suspense</option>'.html_safe) %>
-</p>
+<%= form_tag display_path, method: 'get' do %>
+<%= select_tag :category_movie_display, options_for_select(["Action","Suspense","Comedy"]) %>
+<%= submit_tag "Search" %>
+<% end %>
+</p>  
 
-<p><%= link_to "Submit", category_display_path(':Select_tag') %></p>
 		
