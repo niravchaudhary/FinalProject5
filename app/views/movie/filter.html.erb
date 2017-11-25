@@ -1,10 +1,4 @@
 <h1><%= @movie_name1 %></h1>
-<nav>
- <ul>
-  <li> <%= link_to 'Home', root_path %></li>
-  <li> <%= link_to 'About', about_page_about_path %></li>
-  </ul>
-</nav>  
  <% @movie3.each do |movie| %>
      <h2><%= link_to movie.name,own_product_path(name: movie.name) %></h2>
      <p> <%=  movie.description %> </p>

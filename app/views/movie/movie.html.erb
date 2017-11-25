@@ -1,11 +1,4 @@
-<h1> Movie </h1>
-<nav>
- <ul>
-  <li> <%= link_to 'Home', root_path %></li>
-  <li> <%= link_to 'About', about_page_about_path %></li>
-  </ul>
-</nav>
-      
+	   <h1> Movie </h1>
  <%= form_tag display_path, method: 'get' do %>
         <%= text_field_tag :category_movie_display %>
         <%= submit_tag "Search" %>
