@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cart/cart'
+
   get 'movie/movie'
 
   get 'about_page/about'
