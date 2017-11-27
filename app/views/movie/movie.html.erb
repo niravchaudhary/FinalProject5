@@ -1,6 +1,6 @@
 	   <h1> Movie </h1>
- <%= form_tag display_path, method: 'get' do %>
-        <%= text_field_tag :category_movie_display %>
+ <%= form_tag own_product_path, method: 'get' do %>
+        <%= text_field_tag :name %>
         <%= submit_tag "Search" %>
       <% end %>     
  <% @movies.each do |movie| %>
@@ -10,6 +10,7 @@
      <p> Release Date: <%= movie.release_date %> </p>
      <p> Price : <%= movie.order_price %> </p>
      <h3><%= link_to movie.filter,filter_path(filter: movie.filter) %></h3>
+	 <p><%= link_to "Add To Cart",cart_path(id: movie), method: :post %></p>
    <% end %>
 <p>Category:
 <%= form_tag display_path, method: 'get' do %>

@@ -17,8 +17,13 @@ Rails.application.routes.draw do
   get '/own_product', to: "movie#own_product", as: 'own_product'
   get '/filter', to: "movie#filter", as: 'filter'
   get '/cat_search', to:"movie#cat_search", as: 'cat_search'
-  #get '/category_show', to: "movie#category_show", as: 'category_show'
-
+  #get '/cart', to:"cart#cart", as: 'Shopping_cart'
+  
+  
+  
+  post '/cart/:id/Add_to_cart' => "cart#Add_to_cart", as:'cart'
+ 
+  get '/cart/show', to: "cart#show", as: 'showcart'
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

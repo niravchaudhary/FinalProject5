@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FinalProject</title>
+  <body>
+    <h1>Welcome to the cart</h1>
+    <table>
+      <tr>
+        <th>Movie</th>
+        <th>Price</th>
+        <th>Tax</th>
+        <th>SubTotal</th>
+        <th>Image</th>
+      </tr>
+      <tr>
+        <% @movie.each do |movie| %>
+        <td><%= movie.name %></td>
+        <td><%= movie.order_price %></td>
+        <td>sfsf</td>
+        <td>fsdfsf</td>
+        <td><%= image_tag movie.image %></td>
+      <% end %>
+      </tr>
+    </table>
+  </body>
+</html>
