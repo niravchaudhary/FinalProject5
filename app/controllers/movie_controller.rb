@@ -28,6 +28,6 @@ class MovieController < ApplicationController
     keyword = "%" + params[:category_search] + "%"
     @movie4 = Movie.where("name LIKE ? and category LIKE ?",keyword, my_cat)
   end
-  
+    
   
 end
