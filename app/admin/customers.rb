@@ -1,3 +1,3 @@
 ActiveAdmin.register Customer do
-  permit_params :first_name, :last_name, :email_address, :password, :name
+  permit_params :first_name, :last_name, :email_address, :password, :name, :province_id
 end
