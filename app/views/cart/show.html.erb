@@ -20,7 +20,7 @@
         <td>sfsf</td>
         <td><%= movie.order_price %></td>
         <td><%= image_tag movie.image %></td>
-        <td><%= link_to "Remove Item", "#" %></td>
+        <td><%= link_to "Remove Item", remove_item_path(id: movie.id)  %></td>
       </tr>
       <% @total += movie.order_price %>
       <% end %>

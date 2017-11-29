@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'login/login'
+
   get 'cart/cart'
 
   get 'movie/movie'
@@ -24,6 +26,7 @@ Rails.application.routes.draw do
   post '/cart/:id/Add_to_cart' => "cart#Add_to_cart", as:'cart'
  
   get '/cart/show', to: "cart#show", as: 'showcart'
+  get '/cart/:id/remove_item', to: "cart#remove_item", as: 'remove_item'
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
