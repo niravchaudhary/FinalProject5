@@ -1,6 +1,9 @@
 nav
+
  ul
   li = link_to 'Home', root_path
   li = link_to 'About', about_page_about_path
   li = link_to 'Movies', movie_movie_path
-  li = link_to 'Login', login_login_path
+  li = link_to 'Login', new_customer_session_path
+  li = link_to 'Log Out Man!!', destroy_customer_session_path, :method => 'delete'
+ 

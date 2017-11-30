@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :customers
-  get 'login/login'
 
   get 'cart/cart'
 
@@ -22,6 +20,20 @@ Rails.application.routes.draw do
   get '/cat_search', to:"movie#cat_search", as: 'cat_search'
   #get '/cart', to:"cart#cart", as: 'Shopping_cart'
   
+  devise_for :customers, controllers:{ sessions: 'customers/sessions'}
+
+  devise_scope :customer do
+  get 'sign_in', to: 'devise/sessions#new'
+  end
+
+  devise_scope :customer do
+  get 'sign_out', to: 'devise/sessions#delete'
+  end
+  devise_for :customers, skip: :all
+  
+  devise_scope :customer do
+    get '/sign_up', to: 'devise/registrations#new'
+  end
   
   
   post '/cart/:id/Add_to_cart' => "cart#Add_to_cart", as:'cart'
