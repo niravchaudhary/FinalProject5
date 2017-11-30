@@ -27,6 +27,7 @@ Rails.application.routes.draw do
  
   get '/cart/show', to: "cart#show", as: 'showcart'
   get '/cart/:id/remove_item', to: "cart#remove_item", as: 'remove_item'
+  get 'login/login'
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
