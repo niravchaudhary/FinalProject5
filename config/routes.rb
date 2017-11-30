@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :customers
   get 'login/login'
 
   get 'cart/cart'
